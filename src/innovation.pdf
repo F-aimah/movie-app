@@ -1,0 +1,39 @@
+Innovation Features Added to the Movie App
+
+1. Duplicate Favourite Prevention
+
+An additional validation feature was implemented to prevent users from adding the same movie multiple times to the
+ favourites list.Before adding a movie to favourites, the application checks whether the movie already exists in local 
+ storage using the movie ID.If the movie already exists, the application displays an alert message instead of storing 
+ duplicate entries.
+
+Benefits:
+- Improves user experience
+- Prevents duplicate movie entries
+- Keeps favourites list organised
+- Demonstrates validation logic
+
+
+2. Interactive Actor and Crew Navigation
+
+Additional navigation functionality was added to improve application interactivity.
+
+Users can:
+- Click cast members
+- Click crew members
+- View actor details
+- Browse other movies associated with actors
+
+This functionality was implemented using Angular routing and TMDB API integration.
+
+Benefits:
+- Enhances movie exploration
+- Improves navigation experience
+- Adds functionality beyond the core assignment requirements
+- Demonstrates dynamic routing and API integration skills
+
+
+Conclusion
+
+These innovations were implemented to improve usability, interactivity, and overall 
+application quality beyond the minimum assignment requirements.
