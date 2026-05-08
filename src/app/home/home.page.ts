@@ -61,9 +61,20 @@ export class HomePage implements OnInit {
   // Inject MovieService
   constructor(private movieService: MovieService) {}
 
-  // Load popular movies when page opens
+  // Load movies and saved favourites
   ngOnInit() {
+
     this.loadPopularMovies();
+
+    // Load favourites from local storage
+    const savedMovies = localStorage.getItem('favourites');
+
+    if (savedMovies) {
+
+      this.favourites = JSON.parse(savedMovies);
+
+    }
+
   }
 
   // Get popular movies from TMDB API
@@ -101,6 +112,20 @@ export class HomePage implements OnInit {
   // Add selected movie to favourites
   addToFavourites(movie: any) {
 
+    // Check if movie already exists
+    const exists = this.favourites.find(
+      fav => fav.id === movie.id
+    );
+
+    // Prevent duplicate movies
+    if (exists) {
+
+      alert('Movie already added!');
+      return;
+
+    }
+
+    // Add movie to favourites
     this.favourites.push(movie);
 
     // Save favourites to local storage
