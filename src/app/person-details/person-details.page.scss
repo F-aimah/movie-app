@@ -1,0 +1,37 @@
+/* Actor image styling */
+img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    background: #f4f4f4;
+  }
+  
+  /* Card styling */
+  ion-card {
+    margin: 16px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  /* Title styling */
+  ion-card-title {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  /* Card content styling */
+  ion-card-content {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Section heading styling */
+  h2 {
+    margin: 16px;
+    font-weight: bold;
+  }
+  
+  /* Paragraph spacing */
+  p {
+    margin-bottom: 10px;
+  }

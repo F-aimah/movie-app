@@ -1,0 +1,83 @@
+<!-- Home page header -->
+<ion-header>
+
+  <ion-toolbar color="primary">
+
+    <!-- Application title -->
+    <ion-title>
+      Movie App
+    </ion-title>
+
+    <!-- Navigation button to favourites page -->
+    <ion-buttons slot="primary">
+
+      <ion-button routerLink="/favourites">
+        Favourites
+      </ion-button>
+
+    </ion-buttons>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<!-- Main page content -->
+<ion-content>
+
+  <!-- Search movies by title -->
+  <ion-searchbar
+    [(ngModel)]="searchTerm"
+    (ionInput)="searchMovies()"
+    placeholder="Search movies">
+  </ion-searchbar>
+
+  <!-- Display movies returned from API -->
+  <ion-card
+    button="true"
+    *ngFor="let movie of movies"
+    [routerLink]="['/movie-details', movie.id]">
+
+    <!-- Display movie poster -->
+    <img
+      *ngIf="movie.poster_path"
+      [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
+    />
+
+    <ion-card-header>
+
+      <!-- Movie title -->
+      <ion-card-title>
+        {{ movie.title }}
+      </ion-card-title>
+
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <!-- Movie release date -->
+      <p>
+        Release Date:
+        {{ movie.release_date }}
+      </p>
+
+      <!-- Movie rating -->
+      <p>
+        Rating:
+        {{ movie.vote_average }}
+      </p>
+
+      <!-- Movie overview -->
+      <p>
+        {{ movie.overview }}
+      </p>
+
+      <!-- Add movie to favourites -->
+      <ion-button (click)="addToFavourites(movie)">
+        Add to Favourites
+      </ion-button>
+
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,35 @@
+/* Styling for movie cards */
+ion-card {
+  margin: 15px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Movie poster styling */
+img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: contain;
+}
+
+/* Add spacing around search bar */
+ion-searchbar {
+  padding: 10px;
+}
+
+/* Movie title styling */
+ion-card-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Improve readability inside cards */
+ion-card-content {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Add spacing between paragraphs */
+p {
+  margin-bottom: 10px;
+}

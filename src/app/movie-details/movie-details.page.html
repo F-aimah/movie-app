@@ -1,0 +1,78 @@
+<!-- Movie details page header -->
+<ion-header>
+
+  <ion-toolbar color="primary">
+
+    <!-- Page title -->
+    <ion-title>
+      Movie Details
+    </ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<!-- Main page content -->
+<ion-content>
+
+  <!-- Cast section -->
+  <h2>Cast</h2>
+
+  <!-- Display cast members -->
+  <ion-card
+    button="true"
+    *ngFor="let actor of cast"
+    [routerLink]="['/person-details', actor.id]">
+
+    <!-- Display actor image if available -->
+    <img
+      *ngIf="actor.profile_path"
+      [src]="'https://image.tmdb.org/t/p/w500' + actor.profile_path"
+    />
+
+    <ion-card-header>
+
+      <!-- Actor name -->
+      <ion-card-title>
+        {{ actor.name }}
+      </ion-card-title>
+
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <!-- Character played in movie -->
+      {{ actor.character }}
+
+    </ion-card-content>
+
+  </ion-card>
+
+  <!-- Crew section -->
+  <h2>Crew</h2>
+
+  <!-- Display crew members -->
+  <ion-card
+    button="true"
+    *ngFor="let member of crew"
+    [routerLink]="['/person-details', member.id]">
+
+    <ion-card-header>
+
+      <!-- Crew member name -->
+      <ion-card-title>
+        {{ member.name }}
+      </ion-card-title>
+
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <!-- Crew member job -->
+      {{ member.job }}
+
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,27 @@
+/* Movie poster styling */
+img {
+  width: 100%;
+  height: 250px;
+
+  /* Display full image without stretching */
+  object-fit: contain;
+
+  /* Background colour behind image */
+  background: #f4f4f4;
+}
+
+/* Movie card spacing */
+ion-card {
+  margin: 16px;
+}
+
+/* Movie title styling */
+ion-card-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Card content text styling */
+ion-card-content {
+  font-size: 16px;
+}

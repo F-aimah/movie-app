@@ -1,0 +1,68 @@
+<!-- Favourites page header -->
+<ion-header>
+
+  <ion-toolbar color="primary">
+
+    <!-- Page title -->
+    <ion-title>
+      Favourite Movies
+    </ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<!-- Main page content -->
+<ion-content>
+
+  <!-- Display favourite movies -->
+  <ion-card *ngFor="let movie of favourites">
+
+    <!-- Display movie poster if available -->
+    <img
+      *ngIf="movie.poster_path"
+      [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
+    />
+
+    <ion-card-header>
+
+      <!-- Movie title -->
+      <ion-card-title>
+        {{ movie.title }}
+      </ion-card-title>
+
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <!-- Movie release date -->
+      <p>
+        Release Date:
+        {{ movie.release_date }}
+      </p>
+
+      <!-- Movie rating -->
+      <p>
+        Rating:
+        {{ movie.vote_average }}
+      </p>
+
+      <!-- Movie overview -->
+      <p>
+        {{ movie.overview }}
+      </p>
+
+      <!-- Remove movie from favourites -->
+      <ion-button
+        color="danger"
+        (click)="removeFavourite(movie)">
+
+        Remove
+
+      </ion-button>
+
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>
