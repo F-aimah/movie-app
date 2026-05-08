@@ -46,7 +46,6 @@ export class PersonDetailsPage implements OnInit {
   person: any;
 
   // Store actor movie list
-  movies: any[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -70,14 +69,7 @@ export class PersonDetailsPage implements OnInit {
 
       });
 
-    // Retrieve movies actor appeared in
-    this.movieService
-      .getPersonMovieCredits(personId)
-      .subscribe((data: any) => {
-
-        this.movies = data.cast;
-
-      });
+    
 
   }
 

@@ -62,30 +62,6 @@
 
   </ion-card>
 
-  <!-- Other movies section -->
-  <h2>Other Movies</h2>
 
-  <!-- Display movies actor appeared in -->
-  <ion-card
-    button="true"
-    *ngFor="let movie of movies"
-    [routerLink]="['/movie-details', movie.id]">
-
-    <!-- Display movie poster -->
-    <img
-      *ngIf="movie.poster_path"
-      [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
-    />
-
-    <ion-card-header>
-
-      <!-- Movie title -->
-      <ion-card-title>
-        {{ movie.title }}
-      </ion-card-title>
-
-    </ion-card-header>
-
-  </ion-card>
 
 </ion-content>
