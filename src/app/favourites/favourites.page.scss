@@ -1,8 +1,11 @@
 /* Styling for movie cards */
 ion-card {
-  margin: 15px;
-  border-radius: 12px;
+  margin: 18px;
+  border-radius: 14px;
   overflow: hidden;
+
+  /* Add subtle shadow */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Movie poster styling */
